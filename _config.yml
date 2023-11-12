@@ -15,7 +15,7 @@ keywords:  # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: eevee.jpeg  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://sh-tan.github.io # the base hostname & protocol for your site
+url: https://SH-Tan.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -130,7 +130,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-exclude: ['_pages']
+include: ['_pages']
 exclude:
   - bin
   - Gemfile
@@ -149,14 +149,12 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-toc
-  - jekyll-twitter-plugin
   - jemoji
 
 # Sitemap settings
@@ -192,43 +190,12 @@ display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags wil
 display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
 
 
-# Display different badges withs stats for your publications
-enable_publication_badges:
-  altmetric: flase # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions: flase # Dimensions badge (https://badge.dimensions.ai/)
-
-# Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
-
-# Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 5  # leave blank to always show all authors
-more_authors_animation_delay: 10  # more authors are revealed on click using animation; smaller delay means faster animation
-
-# Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-enable_publication_thumbnails: true
-
-# -----------------------------------------------------------------------------
-# Jekyll Link Attributes
-# -----------------------------------------------------------------------------
-
-# These are the defaults
-external_links:
-  enabled: true
-  rel: external nofollow noopener
-  target: _blank
-  exclude:
-
-
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: false # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
-  widths:
-    - 480
-    - 800
-    - 1400
+  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   input_directories:
     - assets/img/
   input_formats:
@@ -300,13 +267,6 @@ jekyll_get_json:
     json: assets/json/resume.json # it can also be an url
 jsonresume:
   - basics
-  - work
   - education
-  - projects
-  - volunteer
-  - awards
-  - certificates
   - skills
   - languages
-  - interests
-  - references
