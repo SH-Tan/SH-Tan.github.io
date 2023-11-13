@@ -63,11 +63,11 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: SH-Tan # your GitHub user name
+github_username: # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: shuhang-tan # your LinkedIn user name
+linkedin_username: # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
@@ -100,7 +100,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  Perfer email.
+  You can even add a little note about which of these is the best way to reach you.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -111,6 +111,15 @@ cronitor_analytics:  # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
 google_site_verification:  # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
+
+# -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+
+blog_name: al-folio # blog_name will be displayed in your blog page
+blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+blog_description: a simple whitespace theme for academics
+permalink: /blog/:year/:title/
 
 # Pagination
 pagination:
@@ -133,6 +142,31 @@ giscus:
   theme: preferred_color_scheme  # name of the color scheme (preferred works well with al-folio light/dark mode)
   emit_metadata: 0
   lang: en
+
+# Disqus comments (DEPRECATED)
+disqus_shortname: al-folio # put your disqus shortname
+# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+# External sources.
+# If you have blog posts published on medium.com or other external sources,
+# you can display them in your blog by adding a link to the RSS feed.
+external_sources:
+  - name: medium.com
+    rss_url: https://medium.com/@al-folio/feed
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 announcements:
   enabled: true
@@ -190,7 +224,6 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-  - jekyll-pdf-embed
 
 # Sitemap settings
 defaults:
@@ -368,6 +401,7 @@ jekyll_get_json:
     json: assets/json/resume.json # it can also be an url
 jsonresume:
   - basics
+  - work
   - education
   - publications
   - projects

@@ -38,7 +38,21 @@
     }
   ],
   "skills": [
-    {"Programming Language": "Python"}
+    {
+      "Programming Language": [
+        "Python",
+        "C++",
+        "Matlab",
+        "Latex",
+        "Haskell",
+        "JAVA"
+      ],
+      "Technology": [
+        "Pytorch",
+        "Ubuntu",
+        "ROS"
+      ]
+    }
   
   ],
   "languages": [

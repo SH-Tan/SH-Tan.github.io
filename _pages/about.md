@@ -9,5 +9,7 @@ profile:
   image: eevee.jpeg
   image_circular: false # crops the image to make it circular
 
+social: true
+
 ---
 Hi, I'm Shuhang, the CS Ph.D. student in RPI, started from 2023 Fall.
