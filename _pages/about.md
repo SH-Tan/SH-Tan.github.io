@@ -10,4 +10,4 @@ profile:
   image_circular: false # crops the image to make it circular
 
 ---
-Hi, I'm Shuhang, the Ph.D. studetn in RPI.
+Hi, I'm Shuhang, the CS Ph.D. student in RPI, started from 2023 Fall.
