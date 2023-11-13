@@ -46,7 +46,11 @@
       "endDate": "2018-05"
     }
   ],
-  "skills": ["Python", "C++", "Pytorch", "Matlab", "Latex", "JAVA", "etc"],
+  "skills": [{
+    "Programming Language": "Python, C++, Matlab, Pytorch, JAVA, HASKELL",
+    "Technology": "Latex, Ubuntu, ROS"
+    }
+  ],
   "languages": [
     {
       "language": "Chinese",
