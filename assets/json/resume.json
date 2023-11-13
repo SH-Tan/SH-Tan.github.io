@@ -1,14 +1,19 @@
 {
-  "basics": [{
+  "basics": {
     "name": "Shuhang Tan",
     "label": "Ph.D. student",
     "image": "",
     "email": "tans5@rpi.edu",
     "url": "https://SH-Tan.github.io",
-    "summary": "Computer Science Ph.D. studetn in RPI"
-  }
-],
-   
+    "summary": "Computer Science Ph.D. studetn in RPI",
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "AlbertEinstein",
+        "url": "https://twitter.com/AlbertEinstein"
+      }
+    ]
+  },  
   "education": [
     {
       "institution": "University of Science and Technology of China",
@@ -31,6 +36,10 @@
       "startDate": "2017-08",
       "endDate": "2018-05"
     }
+  ],
+  "skills": [
+    {"Programming Language": "Python"}
+  
   ],
   "languages": [
     {
