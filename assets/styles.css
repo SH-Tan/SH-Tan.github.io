@@ -22,3 +22,9 @@ h3{font-size:20px}.publications li{grid-template-columns:82px minmax(0,1fr)}
 .graph-study{margin-top:23px;padding-left:20px;border-left:2px solid var(--line)}
 h4{font-size:19px;line-height:1.5;margin:0 0 6px}
 @media(max-width:640px){.graph-study{padding-left:14px}.project-figure{margin:17px 0 20px}.project-figure figcaption{font-size:16px}}
+
+/* Vector figures stay sharp when enlarged; paired results stack on phones. */
+.figure-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.figure-pair .project-figure{min-width:0;margin-top:10px}
+.project-figure>a{cursor:zoom-in}
+@media(max-width:640px){.figure-pair{grid-template-columns:1fr;gap:0}}

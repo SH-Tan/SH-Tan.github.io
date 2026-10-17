@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Shuhang Tan, Computer Science Ph.D. student at Rensselaer Polytechnic Institute. Efficient LLMs, model compression, distillation, and explainable AI.">
-<link rel="canonical" href="https://sh-tan.github.io/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=20261017-3">
+<link rel="canonical" href="https://sh-tan.github.io/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=20261017-4">
 <title>Shuhang Tan | Rensselaer Polytechnic Institute</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 <h1 id="name">Shuhang Tan</h1>
 <p class="affiliation">Ph.D. student in Computer Science<br>Rensselaer Polytechnic Institute &middot; Troy, New York</p>
 <div class="email-links"><a href="mailto:tans5@rpi.edu">tans5@rpi.edu</a><a href="mailto:shuhangtan962@gmail.com">shuhangtan962@gmail.com</a></div>
-<div class="profile-links"><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/SH-Tan">GitHub</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a><a href="assets/Shuhang-Tan-CV.pdf" title="Shuhang Tan - Curriculum Vitae">CV [PDF]</a></div>
+<div class="profile-links"><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/SH-Tan">GitHub</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a><a href="assets/CV.pdf?v=20261017-4" title="CV">CV [PDF]</a></div>
 </div><img class="profile-photo" src="assets/profile.jpg" alt="Pikachu made from yellow flowers on wet stone" width="1265" height="1531">
 </div>
 <p>I am a Ph.D. student at Rensselaer Polytechnic Institute, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. My research focuses on making neural networks and large language models more efficient and interpretable, with an emphasis on model pruning, knowledge distillation, and graph-based analysis.</p>
@@ -29,8 +29,8 @@
 <div class="section-heading"><h2 id="projects-title">Recent research &amp; projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
 <article class="project featured"><p class="project-meta">Current research &middot; LLM compression</p><h3>Distillation-Aware Pruning for LLMs</h3>
 <figure class="project-figure">
-<a href="assets/dap.png" aria-label="View the DAP diagram at full size"><img src="assets/dap.png" alt="Conventional magnitude pruning ranks weights by their absolute values; DAP ranks estimated irrecoverable damage by subtracting recoverability from pruning damage."></a>
-<figcaption>DAP accounts for both pruning damage and what distillation can repair. <a href="assets/dap.png">View full-size figure</a></figcaption>
+<a href="assets/dap-method.svg" aria-label="View the DAP diagram at full size"><img src="assets/dap-method.svg" alt="Conventional magnitude pruning ranks weights by their absolute values; DAP ranks estimated irrecoverable damage by subtracting recoverability from pruning damage."></a>
+<figcaption>DAP accounts for both pruning damage and what distillation can repair. <a href="assets/dap-method.svg">Enlarge figure</a> &middot; <a href="assets/dap-method.pdf">Vector PDF</a></figcaption>
 </figure>
 <p>I develop pruning methods that account for what a teacher can repair during distillation. DAP jointly models immediate pruning damage and recoverability to design stronger compressed students.</p><p>Experiments on Qwen3-8B and DeepSeek-R1-Distill-Llama-8B show gains of up to <strong>3.9 percentage points</strong> in average post-distillation performance over the strongest pruning baseline, under matched sparsity and training budgets.</p><p class="project-note">Manuscript under review at ICLR 2027.</p></article>
 <div class="project graph-projects" role="group" aria-labelledby="graph-projects-title">
@@ -38,8 +38,8 @@
 <h3 id="graph-projects-title">Understanding Neural Networks Through Graph Curvature</h3>
 <p>I represent neural networks as graphs and use Ricci curvature to interpret their information flow. This line of work connects model structure with two complementary questions: which connections can be pruned, and which bottlenecks are associated with fragile predictions?</p>
 <figure class="project-figure">
-<a href="assets/graph-curvature.jpg" aria-label="View the graph-curvature pipeline at full size"><img src="assets/graph-curvature.jpg" alt="Graph-curvature pruning pipeline: construct a neural graph, calculate edge curvature over a calibration set, store each edge's minimum curvature, and order edges by curvature."></a>
-<figcaption>The graph-curvature pruning pipeline: from a trained network and calibration data to an ordering of neural connections. <a href="assets/graph-curvature.jpg">View full-size figure</a></figcaption>
+<a href="assets/graph-curvature-overview.jpg" aria-label="View the graph-curvature pipeline at full size"><img src="assets/graph-curvature-overview.jpg" alt="Graph-curvature pruning pipeline: construct a neural graph, calculate edge curvature over a calibration set, store each edge's minimum curvature, and order edges by curvature."></a>
+<figcaption>The graph-curvature pruning pipeline: from a trained network and calibration data to an ordering of neural connections. <a href="assets/graph-curvature-overview.jpg">View full-size figure</a></figcaption>
 </figure>
 <article class="graph-study" aria-labelledby="pruning-title">
 <h4 id="pruning-title">Pruning: Post-Training Neural Network Pruning Using Graph Curvature</h4>
@@ -54,7 +54,23 @@
 <div class="resource-links"><a href="https://arxiv.org/abs/2410.19607">Robustness paper</a></div>
 </article>
 </div>
-<article class="project"><p class="project-meta">Earlier work &middot; Autonomous driving</p><h3>Driving Risk Assessment &amp; LiDAR Perception</h3><p>A driving safety field that jointly models roads, vehicles, and pedestrians, alongside LiDAR-based 3D detection that combines voxel and range-view representations for small-object detection.</p><div class="resource-links"><a href="https://github.com/SH-Tan/AV_risk_model">Risk assessment code</a><a href="https://github.com/SH-Tan/voxel-rangenet">3D detection code</a></div></article>
+<article class="project" id="rcp-rf" aria-labelledby="rcp-title">
+<p class="project-meta">Autonomous driving &middot; IET Intelligent Transport Systems 2024</p>
+<h3 id="rcp-title">RCP-RF: Road-Car-Pedestrian Risk Assessment</h3>
+<p>A driving risk potential field that jointly models road geometry, lane boundaries, vehicles, and pedestrians. This framework combines the surrounding traffic scene with relative-motion estimates to assess driving risk.</p>
+<div class="figure-pair">
+<figure class="project-figure">
+<a href="assets/rcp-rf-traffic.svg" aria-label="Enlarge the RCP-RF traffic scene"><img src="assets/rcp-rf-traffic.svg" alt="Traffic scene showing the ego vehicle in red and nearby vehicles in yellow, with road position axes in meters."></a>
+<figcaption>Traffic scene: the ego vehicle and nearby vehicles. <a href="assets/rcp-rf-traffic.svg">Enlarge figure</a></figcaption>
+</figure>
+<figure class="project-figure">
+<a href="assets/rcp-rf-risk.svg" aria-label="Enlarge the RCP-RF risk field"><img src="assets/rcp-rf-risk.svg" alt="Driving-risk field contours across five road lanes, with a color scale from blue for lower values to red for higher values."></a>
+<figcaption>Driving-risk contours across the road. <a href="assets/rcp-rf-risk.svg">Enlarge figure</a></figcaption>
+</figure>
+</div>
+<div class="resource-links"><a href="https://github.com/SH-Tan/AV_risk_model">Risk assessment code</a></div>
+</article>
+<article class="project"><p class="project-meta">Earlier work &middot; Autonomous perception</p><h3>LiDAR-Based 3D Object Detection</h3><p>A LiDAR-only architecture that combines voxel and range-view representations to improve small-object detection for autonomous vehicles.</p><div class="resource-links"><a href="https://github.com/SH-Tan/voxel-rangenet">3D detection code</a></div></article>
 </section>
 <section id="publications" aria-labelledby="publications-title">
 <div class="section-heading"><h2 id="publications-title">Selected publications</h2><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar &rarr;</a></div>
