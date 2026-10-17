@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shuhang Tan, Computer Science Ph.D. student at Rensselaer Polytechnic Institute. Efficient LLMs, model compression, distillation, and explainable AI.">
+<link rel="canonical" href="https://sh-tan.github.io/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css">
+<title>Shuhang Tan | Rensselaer Polytechnic Institute</title>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page" id="top">
+<header><a class="wordmark" href="#top">Shuhang Tan</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#education">Education</a></nav></header>
+<main id="main">
+<section class="profile" id="about" aria-labelledby="name">
+<p class="eyebrow">Computer Science &middot; Rensselaer Polytechnic Institute</p>
+<h1 id="name">Shuhang Tan</h1>
+<p class="affiliation">Ph.D. student in Computer Science<br>Rensselaer Polytechnic Institute &middot; Troy, New York</p>
+<div class="profile-links"><a href="mailto:shuhangtan962@gmail.com">Email</a><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/SH-Tan">GitHub</a><a href="assets/Shuhang_Tan_CV.pdf">CV [PDF]</a></div>
+<p>I am a Ph.D. student at Rensselaer Polytechnic Institute, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. My research focuses on making neural networks and large language models more efficient and interpretable, with an emphasis on model pruning, knowledge distillation, and graph-based analysis.</p>
+<p>My current work studies how to prune language models with their subsequent distillation in mind: which parts of a model can a teacher help recover? Previously, I worked on autonomous-driving perception and risk assessment at the University of Science and Technology of China.</p>
+<p class="interests"><strong>Research interests</strong><br>Efficient LLMs &middot; Model compression &amp; distillation &middot; Explainable AI &middot; Neuro-symbolic AI</p>
+</section>
+<section id="projects" aria-labelledby="projects-title">
+<div class="section-heading"><h2 id="projects-title">Recent research &amp; projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
+<article class="project featured"><p class="project-meta">Current research &middot; LLM compression</p><h3>Distillation-Aware Pruning for LLMs</h3><p>I develop pruning methods that account for what a teacher can repair during distillation. DAP jointly models immediate pruning damage and recoverability to design stronger compressed students.</p><p>Experiments on Qwen3-8B and DeepSeek-R1-Distill-Llama-8B show gains of up to <strong>3.9 percentage points</strong> in average post-distillation performance over the strongest pruning baseline, under matched sparsity and training budgets.</p><p class="project-note">Manuscript under review at ICLR 2027.</p></article>
+<article class="project"><p class="project-meta">Neural network compression &middot; Graph geometry</p><h3>Post-Training Pruning Using Graph Curvature</h3><p>An interpretable pruning method that uses graph Ricci curvature to identify important information flows and redundant connections. My work includes GPU-accelerated curvature computation and extensions to transformer information-flow analysis.</p><div class="resource-links"><a href="https://openreview.net/forum?id=kwACVY73Ug">Paper</a><a href="https://github.com/SH-Tan/Post-Training-NN-Pruning-using-Graph-Curvature">Code</a></div></article>
+<article class="project"><p class="project-meta">Earlier work &middot; Autonomous driving</p><h3>Driving Risk Assessment &amp; LiDAR Perception</h3><p>A driving safety field that jointly models roads, vehicles, and pedestrians, alongside LiDAR-based 3D detection that combines voxel and range-view representations for small-object detection.</p><div class="resource-links"><a href="https://github.com/SH-Tan/AV_risk_model">Risk assessment code</a><a href="https://github.com/SH-Tan/voxel-rangenet">3D detection code</a></div></article>
+</section>
+<section id="publications" aria-labelledby="publications-title">
+<div class="section-heading"><h2 id="publications-title">Selected publications</h2><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar &rarr;</a></div>
+<ol class="publications">
+<li><span class="pub-year">In review</span><div><h3>Prune What the Teacher Can Repair: Distillation-Aware Pruning for LLMs</h3><p class="venue">Under review at ICLR 2027</p></div></li>
+<li><span class="pub-year">2026</span><div><h3><a href="https://openreview.net/forum?id=kwACVY73Ug">Post-Training Neural Network Pruning Using Graph Curvature</a></h3><p class="venue">Transactions on Machine Learning Research (TMLR)</p><div class="resource-links"><a href="https://openreview.net/pdf?id=kwACVY73Ug">PDF</a><a href="https://github.com/SH-Tan/Post-Training-NN-Pruning-using-Graph-Curvature">Code</a></div></div></li>
+<li><span class="pub-year">2024</span><div><h3><a href="https://arxiv.org/abs/2410.19607">Analyzing Neural Network Robustness Using Graph Curvature</a></h3><p class="venue">IEEE International Conference on Assured Autonomy (ICAA)</p><div class="resource-links"><a href="https://arxiv.org/abs/2410.19607">arXiv</a></div></div></li>
+<li><span class="pub-year">2024</span><div><h3>RCP-RF: A Comprehensive Road-Car-Pedestrian Risk Management Framework Based on Driving Risk Potential Field</h3><p class="venue">IET Intelligent Transport Systems</p></div></li>
+</ol></section>
+<section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2><dl class="education">
+<div><dt>Rensselaer Polytechnic Institute</dt><dd>Ph.D. in Computer Science <span>2023 &ndash; present &middot; Expected April 2028</span></dd></div>
+<div><dt>University of Science and Technology of China</dt><dd>Master of Computer Technology <span>2020 &ndash; 2023</span></dd></div>
+<div><dt>China University of Mining and Technology</dt><dd>Bachelor of Electrical Engineering and Automation <span>2016 &ndash; 2020</span></dd></div>
+<div><dt>University of Wisconsin&ndash;Madison</dt><dd>Exchange Program in Electrical Engineering <span>2017 &ndash; 2018</span></dd></div>
+</dl></section>
+<section id="service" aria-labelledby="service-title"><h2 id="service-title">Teaching &amp; service</h2><p><strong>Teaching assistant at RPI.</strong> Data Structures; Foundations of Computer Science; Advanced Operating Systems.</p><p><strong>Reviewer.</strong> AAAI, ICLR, ICCPS, Pattern Recognition, IET Intelligent Transport Systems, and IEEE Transactions on Intelligent Vehicles.</p></section>
+</main>
+<footer><span>&copy; 2026 Shuhang Tan</span><a href="mailto:shuhangtan962@gmail.com">shuhangtan962@gmail.com</a><a href="#top">Back to top &uarr;</a></footer>
+</div></body></html>
