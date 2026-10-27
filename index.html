@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Shuhang Tan, Computer Science Ph.D. student at Rensselaer Polytechnic Institute. Efficient LLMs, model compression, distillation, and explainable AI.">
+<meta property="og:title" content="Shuhang Tan | Efficient LLMs &amp; Model Compression">
+<meta property="og:description" content="Ph.D. student at RPI working on efficient LLMs, model compression, distillation, and explainable AI.">
+<meta property="og:url" content="https://sh-tan.github.io/">
+<meta property="og:type" content="website">
 <link rel="canonical" href="https://sh-tan.github.io/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=20261027-ube-2">
 <title>Shuhang Tan | Rensselaer Polytechnic Institute</title>
 </head>
@@ -21,10 +25,10 @@
 <div class="profile-links"><a href="https://github.com/SH-Tan">GitHub</a><a href="assets/Shuhang_Tan_CV.pdf?v=2f597e7a51f1" title="Shuhang&#39;s CV">CV [PDF]</a><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a></div>
 </div><img class="profile-photo" src="assets/profile.jpg" alt="Pikachu made from yellow flowers on wet stone" width="1265" height="1531">
 </div>
-<p>I am a 4th-year Ph.D. student in the <a href="https://www.cs.rpi.edu/">Department of Computer Science</a> at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. I received my master&rsquo;s degree in Computer Technology from the University of Science and Technology of China in 2023, where I worked on autonomous-driving perception and risk assessment, and my bachelor&rsquo;s degree in Electrical Engineering and Automation from China University of Mining and Technology in 2020.</p>
+<p>I am a 4th-year Ph.D. student in the <a href="https://www.cs.rpi.edu/">Department of Computer Science</a> at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. I received my master&rsquo;s degree in Computer Technology from the University of Science and Technology of China in 2023, where I worked on autonomous-driving perception and risk assessment.</p>
 <p>My research focuses on making neural networks and large language models more efficient and interpretable. I study how model structure and information flow can guide compression while preserving useful capabilities. My work spans model pruning and knowledge distillation, graph theory-based analysis of neural networks, and explainable AI.</p>
 <p>I am also exploring efficient inference in long-horizon settings, particularly how KV cache management can help language models retain useful context over extended interactions within limited memory budgets.</p>
-<p class="interests"><strong>Engineering toolkit</strong><br>Python / C++ &middot; PyTorch &middot; CUDA &middot; GPU implementation &middot; ROS &middot; TypeScript / Java / SQL</p>
+<p class="interests"><strong>Engineering toolkit</strong><br>Python / C++ &middot; PyTorch / CUDA &middot; Linux / Git / Docker &middot; ROS &middot; TypeScript / Java / SQL</p>
 </section>
 <section id="projects" aria-labelledby="projects-title">
 <div class="section-heading"><h2 id="projects-title">Recent research &amp; projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
@@ -57,6 +61,11 @@
 <div class="resource-links"><a href="https://arxiv.org/abs/2410.19607">Paper</a></div>
 </article>
 </div>
+<article class="project" id="kv-cache" aria-labelledby="kv-cache-title">
+<p class="project-meta">Current exploration &middot; Efficient LLM inference</p>
+<h3 id="kv-cache-title">KV Cache Management for Long-Horizon Settings</h3>
+<p>I am exploring KV cache eviction and memory management for language models operating over long contexts and extended interactions. I am interested in how to decide which cached information to retain, when to evict it, and how to allocate limited memory as context grows. The goal is to balance memory use and inference efficiency with the ability to preserve information needed later in a task.</p>
+</article>
 <article class="project" id="rcp-rf" aria-labelledby="rcp-title">
 <p class="project-meta">Autonomous driving &middot; IET Intelligent Transport Systems 2024</p>
 <h3 id="rcp-title">RCP-RF: Road-Car-Pedestrian Risk Assessment</h3>
@@ -74,11 +83,6 @@
 <div class="resource-links"><a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/itr2.12508">Paper</a><a href="https://github.com/SH-Tan/AV_risk_model">Code</a></div>
 </article>
 <article class="project"><p class="project-meta">Earlier work &middot; Autonomous perception</p><h3>LiDAR-Based 3D Object Detection</h3><p>A LiDAR-only architecture that combines voxel and range-view representations to improve small-object detection for autonomous vehicles.</p><div class="resource-links"><a href="https://github.com/SH-Tan/voxel-rangenet">Code</a></div></article>
-<article class="project" id="kv-cache" aria-labelledby="kv-cache-title">
-<p class="project-meta">Current exploration &middot; Efficient LLM inference</p>
-<h3 id="kv-cache-title">KV Cache Management for Long-Horizon Settings</h3>
-<p>I am exploring KV cache eviction and memory management for language models operating over long contexts and extended interactions. I am interested in how to decide which cached information to retain, when to evict it, and how to allocate limited memory as context grows. The goal is to balance memory use and inference efficiency with the ability to preserve information needed later in a task.</p>
-</article>
 </section>
 <section id="publications" aria-labelledby="publications-title">
 <div class="section-heading"><h2 id="publications-title">Selected publications</h2><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar &rarr;</a></div>
