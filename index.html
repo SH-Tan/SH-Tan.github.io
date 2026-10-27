@@ -9,31 +9,25 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="page" id="top">
-<header><a class="wordmark" href="#top">Shuhang Tan</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#experience">Internship</a><a href="#education">Education</a></nav></header>
+<header><a class="wordmark" href="#top">Shuhang Tan</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#experience">Industry Experience</a><a href="#education">Education</a></nav></header>
 <main id="main">
 <section class="profile" id="about" aria-labelledby="name">
 <div class="profile-intro">
 <div class="profile-details">
 <p class="eyebrow">Computer Science &middot; Rensselaer Polytechnic Institute</p>
 <h1 id="name">Shuhang Tan</h1>
-<p class="affiliation">Ph.D. student in Computer Science<br>Rensselaer Polytechnic Institute &middot; Troy, New York</p>
+<p class="affiliation">4th-year Ph.D. student in Computer Science<br>Rensselaer Polytechnic Institute &middot; Troy, New York<br>Efficient LLMs &middot; Model compression &amp; distillation</p>
 <div class="email-links"><a href="mailto:tans5@rpi.edu">tans5@rpi.edu</a><a href="mailto:shuhangtan962@gmail.com">shuhangtan962@gmail.com</a></div>
-<div class="profile-links"><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/SH-Tan">GitHub</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a><a href="assets/Shuhang_Tan_CV.pdf?v=2f597e7a51f1" title="Shuhang&#39;s CV">CV [PDF]</a></div>
+<div class="profile-links"><a href="https://github.com/SH-Tan">GitHub</a><a href="assets/Shuhang_Tan_CV.pdf?v=2f597e7a51f1" title="Shuhang&#39;s CV">CV [PDF]</a><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a></div>
 </div><img class="profile-photo" src="assets/profile.jpg" alt="Pikachu made from yellow flowers on wet stone" width="1265" height="1531">
 </div>
-<p>I am a Ph.D. student in the <a href="https://www.cs.rpi.edu/">Department of Computer Science</a> at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. Before joining RPI, I received my master&rsquo;s degree in Computer Technology from the University of Science and Technology of China in 2023, where I worked on autonomous-driving perception and risk assessment. I received my bachelor&rsquo;s degree in Electrical Engineering and Automation from China University of Mining and Technology in 2020 and studied at the University of Wisconsin&ndash;Madison as an exchange student.</p>
-<p>My research focuses on making neural networks and large language models more efficient and interpretable. I study how model structure and information flow can guide compression while preserving useful capabilities. My work includes graph-curvature methods for neural network pruning and robustness analysis, as well as distillation-aware pruning that considers both the damage caused by removing model components and what a teacher can help recover.</p>
-<p>I am also exploring efficient inference in long-horizon settings, with a focus on key-value (KV) cache management. This direction asks how language models can retain useful context over extended interactions while working within limited memory budgets.</p>
-<p class="interests"><strong>Research interests</strong><br>Efficient LLMs &middot; Model compression &amp; distillation &middot; KV cache &amp; memory management &middot; Explainable AI &middot; Neuro-symbolic learning</p>
+<p>I am a fourth-year CS Ph.D. student at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. My research focuses on efficient LLMs, model compression and distillation, explainable AI, and neuro-symbolic AI.</p>
+<p>My work on <a href="#pruning-title">graph-curvature pruning</a> was published in TMLR (2026). I currently develop <a href="#dap">distillation-aware pruning for LLMs</a>, with gains of up to 3.9 percentage points in average post-distillation performance over the strongest pruning baseline under matched sparsity and training budgets.</p>
+<p class="interests"><strong>Engineering toolkit</strong><br>Python / C++ &middot; PyTorch &middot; CUDA &middot; GPU implementation &middot; ROS &middot; TypeScript / Java / SQL</p>
 </section>
 <section id="projects" aria-labelledby="projects-title">
 <div class="section-heading"><h2 id="projects-title">Recent research &amp; projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
-<article class="project" id="kv-cache" aria-labelledby="kv-cache-title">
-<p class="project-meta">Current exploration &middot; Efficient LLM inference</p>
-<h3 id="kv-cache-title">KV Cache Management for Long-Horizon Settings</h3>
-<p>I am exploring KV cache eviction and memory management for language models operating over long contexts and extended interactions. I am interested in how to decide which cached information to retain, when to evict it, and how to allocate limited memory as context grows. The goal is to balance memory use and inference efficiency with the ability to preserve information needed later in a task.</p>
-</article>
-<article class="project featured"><p class="project-meta">Current research &middot; LLM compression</p><h3>Distillation-Aware Pruning for LLMs</h3>
+<article class="project featured" id="dap"><p class="project-meta">Current research &middot; LLM compression</p><h3>Distillation-Aware Pruning for LLMs</h3>
 <figure class="project-figure">
 <a href="assets/dap-method.svg" aria-label="View the DAP diagram at full size"><img src="assets/dap-method.svg" alt="Conventional magnitude pruning ranks weights by their absolute values; DAP ranks estimated irrecoverable damage by subtracting recoverability from pruning damage."></a>
 <figcaption>DAP accounts for both pruning damage and what distillation can repair. <a href="assets/dap-method.svg">Enlarge figure</a> &middot; <a href="assets/dap-method.pdf">Vector PDF</a></figcaption>
@@ -50,7 +44,7 @@
 <article class="graph-study" aria-labelledby="pruning-title">
 <h4 id="pruning-title">Pruning: Post-Training Neural Network Pruning Using Graph Curvature</h4>
 <p class="project-meta">TMLR 2026</p>
-<p>An interpretable post-training pruning method that identifies important information flows and structurally redundant connections using graph Ricci curvature. My work also includes GPU-accelerated curvature computation and extensions to transformer information-flow analysis.</p>
+<p>An interpretable post-training pruning method that identifies important information flows and structurally redundant connections using graph Ricci curvature. I accelerated the shortest-path stage of curvature computation on GPU using dynamic programming and matrix-based operations. I also extended the framework to Llama 3 and IBM Granite by constructing graph representations of transformer information flow for model analysis and pruning.</p>
 <div class="resource-links"><a href="https://openreview.net/forum?id=kwACVY73Ug">Paper</a><a href="https://github.com/SH-Tan/Post-Training-NN-Pruning-using-Graph-Curvature">Code</a></div>
 </article>
 <article class="graph-study" aria-labelledby="robustness-title">
@@ -76,7 +70,12 @@
 </div>
 <div class="resource-links"><a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/itr2.12508">Paper</a><a href="https://github.com/SH-Tan/AV_risk_model">Code</a></div>
 </article>
-<article class="project"><p class="project-meta">Earlier work &middot; Autonomous perception</p><h3>LiDAR-Based 3D Object Detection</h3><p>A LiDAR-only architecture that combines voxel and range-view representations to improve small-object detection for autonomous vehicles.</p><p>As a Perception Research Engineer at Shineauto through a startup&ndash;lab collaboration (February 2022 &ndash; January 2023), I developed and deployed C++/Python LiDAR perception pipelines for real-time inference. I integrated 3D non-maximum suppression into a Scanline clustering pipeline and deployed Voxel-RCNN on an autonomous vehicle using ROS for on-road data collection and system testing.</p><div class="resource-links"><a href="https://github.com/SH-Tan/voxel-rangenet">Code</a></div></article>
+<article class="project"><p class="project-meta">Earlier work &middot; Autonomous perception</p><h3>LiDAR-Based 3D Object Detection</h3><p>A LiDAR-only architecture that combines voxel and range-view representations to improve small-object detection for autonomous vehicles.</p><div class="resource-links"><a href="https://github.com/SH-Tan/voxel-rangenet">Code</a></div></article>
+<article class="project" id="kv-cache" aria-labelledby="kv-cache-title">
+<p class="project-meta">Current exploration &middot; Efficient LLM inference</p>
+<h3 id="kv-cache-title">KV Cache Management for Long-Horizon Settings</h3>
+<p>I am exploring KV cache eviction and memory management for language models operating over long contexts and extended interactions. I am interested in how to decide which cached information to retain, when to evict it, and how to allocate limited memory as context grows. The goal is to balance memory use and inference efficiency with the ability to preserve information needed later in a task.</p>
+</article>
 </section>
 <section id="publications" aria-labelledby="publications-title">
 <div class="section-heading"><h2 id="publications-title">Selected publications</h2><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar &rarr;</a></div>
@@ -87,7 +86,13 @@
 <li><span class="pub-year">2024</span><div><h3>RCP-RF: A Comprehensive Road-Car-Pedestrian Risk Management Framework Based on Driving Risk Potential Field</h3><p class="venue">IET Intelligent Transport Systems</p><div class="resource-links"><a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/itr2.12508">Paper</a><a href="https://github.com/SH-Tan/AV_risk_model">Code</a></div></div></li>
 </ol></section>
 <section id="experience" aria-labelledby="experience-title">
-<h2 id="experience-title">Internship</h2>
+<h2 id="experience-title">Industry Experience</h2>
+<article class="project" aria-labelledby="shineauto-title">
+<p class="project-meta">February 2022 &ndash; January 2023 &middot; Startup&ndash;lab collaboration</p>
+<h3 id="shineauto-title">Perception Research Engineer &middot; Shineauto</h3>
+<p>I developed and deployed C++/Python LiDAR perception pipelines for autonomous driving, including point-cloud clustering and 3D bounding-box estimation for real-time inference.</p>
+<p>I integrated 3D non-maximum suppression into a Scanline clustering pipeline and deployed Voxel-RCNN on a real autonomous vehicle using ROS for on-road data collection and system testing.</p>
+</article>
 <article class="project" aria-labelledby="morgan-stanley-title">
 <p class="project-meta">July &ndash; September 2022 &middot; Shanghai, China</p>
 <h3 id="morgan-stanley-title">Technology Intern &middot; Morgan Stanley</h3>
