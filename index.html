@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,27 +16,30 @@
 <div class="profile-details">
 <p class="eyebrow">Computer Science &middot; Rensselaer Polytechnic Institute</p>
 <h1 id="name">Shuhang Tan</h1>
-<p class="affiliation">4th-year Ph.D. student in Computer Science<br>Rensselaer Polytechnic Institute &middot; Troy, New York<br>Efficient LLMs &middot; Model compression &amp; distillation</p>
+<p class="affiliation">Ph.D. student in Computer Science<br>Rensselaer Polytechnic Institute &middot; Troy, New York<br>Efficient LLMs &middot; Model compression &amp; distillation &middot; Explainable AI</p>
 <div class="email-links"><a href="mailto:tans5@rpi.edu">tans5@rpi.edu</a><a href="mailto:shuhangtan962@gmail.com">shuhangtan962@gmail.com</a></div>
 <div class="profile-links"><a href="https://github.com/SH-Tan">GitHub</a><a href="assets/Shuhang_Tan_CV.pdf?v=2f597e7a51f1" title="Shuhang&#39;s CV">CV [PDF]</a><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a></div>
 </div><img class="profile-photo" src="assets/profile.jpg" alt="Pikachu made from yellow flowers on wet stone" width="1265" height="1531">
 </div>
-<p>I am a fourth-year CS Ph.D. student at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. My research focuses on efficient LLMs, model compression and distillation, explainable AI, and neuro-symbolic AI.</p>
-<p>My work on <a href="#pruning-title">graph-curvature pruning</a> was published in TMLR (2026). I currently develop <a href="#dap">distillation-aware pruning for LLMs</a>, with gains of up to 3.9 percentage points in average post-distillation performance over the strongest pruning baseline under matched sparsity and training budgets.</p>
+<p>I am a 4th-year Ph.D. student in the <a href="https://www.cs.rpi.edu/">Department of Computer Science</a> at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. I received my master&rsquo;s degree in Computer Technology from the University of Science and Technology of China in 2023, where I worked on autonomous-driving perception and risk assessment, and my bachelor&rsquo;s degree in Electrical Engineering and Automation from China University of Mining and Technology in 2020.</p>
+<p>My research focuses on making neural networks and large language models more efficient and interpretable. I study how model structure and information flow can guide compression while preserving useful capabilities. My work spans model pruning and knowledge distillation, graph theory-based analysis of neural networks, and explainable AI.</p>
+<p>I am also exploring efficient inference in long-horizon settings, particularly how KV cache management can help language models retain useful context over extended interactions within limited memory budgets.</p>
 <p class="interests"><strong>Engineering toolkit</strong><br>Python / C++ &middot; PyTorch &middot; CUDA &middot; GPU implementation &middot; ROS &middot; TypeScript / Java / SQL</p>
 </section>
 <section id="projects" aria-labelledby="projects-title">
 <div class="section-heading"><h2 id="projects-title">Recent research &amp; projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
 <article class="project featured" id="dap"><p class="project-meta">Current research &middot; LLM compression</p><h3>Distillation-Aware Pruning for LLMs</h3>
+<p>How should we compress a language model when it can learn from a teacher afterward? Pruning typically aims to minimize the immediate damage from removing weights, but the least damaged model is not necessarily the strongest student after distillation. I study how the teacher&rsquo;s ability to recover that damage should guide what we prune.</p>
 <figure class="project-figure">
 <a href="assets/dap-method.svg" aria-label="View the DAP diagram at full size"><img src="assets/dap-method.svg" alt="Conventional magnitude pruning ranks weights by their absolute values; DAP ranks estimated irrecoverable damage by subtracting recoverability from pruning damage."></a>
 <figcaption>DAP accounts for both pruning damage and what distillation can repair. <a href="assets/dap-method.svg">Enlarge figure</a> &middot; <a href="assets/dap-method.pdf">Vector PDF</a></figcaption>
 </figure>
-<p>I develop pruning methods that account for what a teacher can repair during distillation. DAP jointly models immediate pruning damage and recoverability to design stronger compressed students.</p><p>Experiments on Qwen3-8B and DeepSeek-R1-Distill-Llama-8B show gains of up to <strong>3.9 percentage points</strong> in average post-distillation performance over the strongest pruning baseline, under matched sparsity and training budgets.</p><p class="project-note">Manuscript under review at ICLR 2027.</p></article>
+<p>Distillation-Aware Pruning (DAP) is a second-order framework that jointly models immediate pruning damage and recoverability under the intended teacher and distillation procedure. It estimates the damage that distillation cannot repair to guide the design of compressed students.</p><p>Experiments on Qwen3-8B and DeepSeek-R1-Distill-Llama-8B show gains of up to <strong>3.9 percentage points</strong> in average post-distillation performance over the strongest pruning baseline, under matched sparsity and training budgets.</p><p class="project-note">Manuscript under review at ICLR 2027.</p></article>
 <div class="project graph-projects" role="group" aria-labelledby="graph-projects-title">
 <p class="project-meta">Explainable AI &amp; neuro-symbolic learning</p>
 <h3 id="graph-projects-title">Understanding Neural Networks Through Graph Curvature</h3>
-<p>I represent neural networks as graphs and use Ricci curvature to interpret their information flow. This line of work connects model structure with two complementary questions: which connections can be pruned, and which bottlenecks are associated with fragile predictions?</p>
+<p>Neural networks are often treated as black boxes: we can measure their predictions, but understanding how their internal structure shapes their behavior remains difficult. I use graph theory and geometry to develop a principled way to analyze these models, representing a neural network as a directed graph that captures the flow of information through its connections.</p>
+<p>Within this representation, I use Ricci curvature to study information flow and structural bottlenecks. This connects the goal of understanding neural networks with two practical questions: which connections can be pruned, and which bottlenecks are associated with fragile predictions?</p>
 <figure class="project-figure">
 <a href="assets/graph-curvature-overview.jpg" aria-label="View the graph-curvature pipeline at full size"><img src="assets/graph-curvature-overview.jpg" alt="Graph-curvature pruning pipeline: construct a neural graph, calculate edge curvature over a calibration set, store each edge's minimum curvature, and order edges by curvature."></a>
 <figcaption>The graph-curvature pruning pipeline: from a trained network and calibration data to an ordering of neural connections. <a href="assets/graph-curvature-overview.jpg">View full-size figure</a></figcaption>
