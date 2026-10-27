@@ -42,8 +42,7 @@
 <div class="project graph-projects" role="group" aria-labelledby="graph-projects-title">
 <p class="project-meta">Explainable AI &amp; neuro-symbolic learning</p>
 <h3 id="graph-projects-title">Understanding Neural Networks Through Graph Curvature</h3>
-<p>Neural networks are often treated as black boxes: we can measure their predictions, but understanding how their internal structure shapes their behavior remains difficult. I use graph theory and geometry to develop a principled way to analyze these models, representing a neural network as a directed graph that captures the flow of information through its connections.</p>
-<p>Within this representation, I use Ricci curvature to study information flow and structural bottlenecks. This connects the goal of understanding neural networks with two practical questions: which connections can be pruned, and which bottlenecks are associated with fragile predictions?</p>
+<p>Neural networks are often treated as black boxes, making it difficult to understand how their internal structure shapes their behavior. I use graph theory and geometry to analyze them as directed graphs that capture information flow, then apply Ricci curvature to identify structural bottlenecks and study two practical questions: which connections can be pruned, and which bottlenecks are associated with fragile predictions?</p>
 <figure class="project-figure">
 <a href="assets/graph-curvature-overview.jpg" aria-label="View the graph-curvature pipeline at full size"><img src="assets/graph-curvature-overview.jpg" alt="Graph-curvature pruning pipeline: construct a neural graph, calculate edge curvature over a calibration set, store each edge's minimum curvature, and order edges by curvature."></a>
 <figcaption>The graph-curvature pruning pipeline: from a trained network and calibration data to an ordering of neural connections. <a href="assets/graph-curvature-overview.jpg">View full-size figure</a></figcaption>
