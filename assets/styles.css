@@ -56,3 +56,44 @@ nav a{white-space:nowrap}
 .overview-panel,.project,.publications,.service-list{overflow-wrap:break-word}
 @media(max-width:640px){.page{padding-right:18px;padding-left:18px}.overview-panel,.featured{padding:18px 16px}.project-figure figcaption a{white-space:normal}}
 @media print{.overview-panel.research-interests{background:none}main>section{break-inside:auto}.overview-panel,h2,h3,h4{break-after:auto}h2,h3,h4{break-after:avoid}}
+
+/* Separate pages share a compact navigation and a consistent heading scale. */
+.page{max-width:1000px;min-height:calc(100vh - 56px);display:flex;flex-direction:column}
+main{flex:1;min-width:0}
+header{gap:20px;padding:20px 0}
+nav{gap:6px;font-size:16px}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:5px 10px;border:1px solid transparent;border-radius:5px;line-height:1.5}
+nav a:hover{background:var(--soft);text-decoration:none;color:var(--link)}
+nav a[aria-current="page"]{background:#edf3f8;border-color:#d4e0eb;color:var(--link)}
+main>section:first-child:not(.profile){border-top:0;padding-top:36px}
+main>section>h1,.section-heading>h1,.page-heading>h1{font-size:34px;line-height:1.25;letter-spacing:-.5px;margin:0 0 26px}
+.page-heading{padding-top:36px}
+.page-heading+section{border-top:0;padding-top:0}
+.project h2{font-size:21px;font-weight:600;line-height:1.5;letter-spacing:0;margin:0 0 8px}
+.graph-study h3{font-size:19px;line-height:1.5;margin-bottom:6px}
+.publications h2{font-size:20px;font-weight:600;line-height:1.55;letter-spacing:0;margin:0 0 4px}
+.publications h2 a{color:var(--ink)}
+.publications h2 a:hover{color:var(--link)}
+#experience .interests{padding-top:20px;border-top:1px solid var(--line)}
+
+/* Photo and contact details form a quiet left column beside the biography. */
+.profile{padding-top:34px;padding-bottom:32px}
+.profile-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:38px;align-items:start}
+.profile-sidebar{min-width:0}
+.profile-sidebar .profile-photo{width:144px;max-width:100%;height:auto;margin-bottom:16px}
+.profile-sidebar .eyebrow{font-size:14px;line-height:1.5;margin-bottom:10px}
+.profile-sidebar h1{font-size:35px;line-height:1.15;letter-spacing:-.7px;margin-bottom:14px}
+.profile-sidebar .affiliation{font-size:16px;line-height:1.55}
+.contact-details{margin:16px 0 0;font-size:16px;line-height:1.55}
+.contact-details dt{font-weight:600;margin-bottom:3px}
+.contact-details dd{margin:0}
+.contact-details .email-links{font-size:16px;line-height:1.65;margin:0}
+.profile-sidebar .profile-links{display:grid;grid-template-columns:max-content max-content;gap:5px 18px;font-size:16px;margin-top:14px}
+.biography{min-width:0;padding-left:30px;border-left:1px solid var(--line)}
+.biography h2{font-size:30px;margin-bottom:18px}
+.biography p:last-child{margin-bottom:0}
+.profile>.research-interests{margin-top:32px}
+.section-action{margin-top:20px;font-size:17px}
+@media(max-width:800px){header{align-items:flex-start;flex-direction:column;gap:10px}.profile-layout{grid-template-columns:205px minmax(0,1fr);gap:26px}.biography{padding-left:24px;font-size:18px}}
+@media(max-width:680px){.profile-layout{grid-template-columns:1fr;gap:28px}.profile-sidebar{text-align:center}.profile-sidebar .profile-photo{margin:0 auto 16px}.profile-sidebar .eyebrow{max-width:300px;margin-left:auto;margin-right:auto}.profile-sidebar h1{font-size:36px}.contact-details .email-links{align-items:center}.profile-sidebar .profile-links{display:flex;justify-content:center;gap:8px 18px}.biography{padding:26px 0 0;border-left:0;border-top:1px solid var(--line)}.biography h2{font-size:28px}.profile>.research-interests{margin-top:28px}.page{min-height:calc(100vh - 20px)}nav{gap:5px;font-size:15px}nav a{padding:6px 9px}.section-heading>h1{margin-bottom:10px}main>section>h1,.section-heading>h1,.page-heading>h1{font-size:30px}.profile{padding-top:26px}}
+@media print{.page{display:block;min-height:0}.profile-layout{grid-template-columns:190px minmax(0,1fr);gap:24px}.profile-sidebar{text-align:left}.profile-sidebar .profile-photo{width:110px;margin-left:0}.biography{border-top:0;border-left:1px solid var(--line);padding:0 0 0 20px}.contact-details .email-links{align-items:flex-start}.profile-sidebar .profile-links{justify-content:flex-start}.section-action{display:none}}

@@ -1,6 +1,6 @@
 # Shuhang Tan — Personal Website
 
-A responsive academic website built with plain HTML, CSS, and JavaScript. No package installation or build step is required.
+A responsive academic website built with plain HTML and CSS. No package installation or build step is required.
 
 ## Publish on GitHub Pages
 
@@ -10,12 +10,16 @@ The public address is https://sh-tan.github.io/ once GitHub Pages finishes deplo
 
 ## Edit the website
 
-- `index.html`: biography, research interests, publications, and contact links.
+- `index.html`: photo, contact links, biography, and research interests.
+- `research.html`: research projects, figures, and paper/code links.
+- `publications.html`: selected publications.
+- `experience.html`: industry experience and engineering toolkit.
+- `education.html`: degrees and exchange program.
+- `service.html`: teaching and academic reviewing.
 - `assets/styles.css`: layout, colors, typography, and responsive styles.
-- `assets/site.js`: theme preference and BibTeX citation copying. Update citations here when editing publications.
 - `assets/favicon.svg`: browser icon.
 
-Content is readable without JavaScript. Theme preferences follow the operating system until the visitor chooses a theme. Clipboard buttons appear only where the browser supports secure clipboard access.
+All pages and navigation work without JavaScript. Each page shares the same navigation, with its current link marked using `aria-current="page"`. When changing navigation, update it in all six HTML files.
 
 ## Local preview
 
@@ -29,4 +33,4 @@ Research interests and PhD status are based on information provided by Shuhang T
 - https://openreview.net/pdf?id=kwACVY73Ug
 - https://www.cs.rpi.edu/~ivanor/cpub/icaa24-tan.pdf
 
-The contact address is listed in these publications. No university affiliation, advisor relationship, CV, or portrait is assumed. Add these details when desired.
+Biography, contact details, education, and experience are maintained from information provided by Shuhang Tan.
