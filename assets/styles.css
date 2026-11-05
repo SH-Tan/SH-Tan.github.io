@@ -12,6 +12,14 @@ h3{font-size:20px}.publications li{grid-template-columns:82px minmax(0,1fr)}
 @media(max-width:640px){.profile-intro{grid-template-columns:1fr;gap:22px}.profile-photo{width:165px}.profile-intro .eyebrow{font-size:15px}.publications li{grid-template-columns:1fr}.email-links,.profile-links{font-size:18px}body{font-size:18px;line-height:1.7}}
 @media print{.profile-intro{grid-template-columns:1fr 120px}.profile-photo{width:120px}}
 
+/* Distinct overview panels retain a comfortable reading width. */
+.overview-panel{padding:22px 24px;border:1px solid var(--line);border-left:3px solid var(--line);border-radius:6px;margin-top:20px;background:#fff}
+.overview-panel h2{font-size:27px;margin-bottom:14px}
+.overview-panel p:last-child{margin-bottom:0}
+.overview-panel.research-interests{background:var(--soft);border-left-color:#6384a2}
+@media(max-width:640px){.overview-panel{padding:18px 16px}.overview-panel h2{font-size:25px}}
+@media print{.overview-panel{background:none;padding:14px 16px}}
+
 /* Research figures remain uncropped and open at their original resolution. */
 .project-figure{margin:20px 0 23px}
 .project-figure>a{display:block;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
@@ -39,3 +47,12 @@ h4{font-size:19px;line-height:1.5;margin:0 0 6px}
 .journal-list{margin:8px 0 0;padding-left:22px;font-size:18px}
 .journal-list li{padding:3px 0}
 @media(max-width:640px){.service-list>div{grid-template-columns:1fr;gap:0;padding:10px 0}.service-list dd{text-align:left}}
+
+/* Shared accents and wrapping keep the overview and projects in harmony. */
+.featured{border-radius:6px}
+.wordmark{flex-shrink:0}
+nav a{white-space:nowrap}
+.profile-details,.project,.publications li>div{min-width:0}
+.overview-panel,.project,.publications,.service-list{overflow-wrap:break-word}
+@media(max-width:640px){.page{padding-right:18px;padding-left:18px}.overview-panel,.featured{padding:18px 16px}.project-figure figcaption a{white-space:normal}}
+@media print{.overview-panel.research-interests{background:none}main>section{break-inside:auto}.overview-panel,h2,h3,h4{break-after:auto}h2,h3,h4{break-after:avoid}}

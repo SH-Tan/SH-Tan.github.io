@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Shuhang Tan, Computer Science Ph.D. student at Rensselaer Polytechnic Institute. Efficient LLMs, model compression, distillation, and explainable AI.">
-<meta property="og:title" content="Shuhang Tan | Efficient LLMs &amp; Model Compression">
-<meta property="og:description" content="Ph.D. student at RPI working on efficient LLMs, model compression, distillation, and explainable AI.">
+<meta name="description" content="Shuhang Tan, Computer Science Ph.D. student at Rensselaer Polytechnic Institute. Research in efficient and explainable AI, neural network compression, and reliable LLM inference.">
+<meta property="og:title" content="Shuhang Tan | Efficient &amp; Explainable AI">
+<meta property="og:description" content="Ph.D. student at RPI researching efficient and explainable AI, neural network compression, and reliable LLM inference.">
 <meta property="og:url" content="https://sh-tan.github.io/">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://sh-tan.github.io/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=20261027-ube-2">
+<link rel="canonical" href="https://sh-tan.github.io/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=20261105-review">
 <title>Shuhang Tan | Rensselaer Polytechnic Institute</title>
 </head>
 <body>
@@ -25,14 +25,21 @@
 <div class="profile-links"><a href="https://github.com/SH-Tan">GitHub</a><a href="assets/Shuhang_Tan_CV.pdf?v=2f597e7a51f1" title="Shuhang&#39;s CV">CV [PDF]</a><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.linkedin.com/in/shuhang-tan/">LinkedIn</a></div>
 </div><img class="profile-photo" src="assets/profile.jpg" alt="Pikachu made from yellow flowers on wet stone" width="1265" height="1531">
 </div>
-<p>I am a fourth-year Ph.D. student in the <a href="https://www.cs.rpi.edu/">Department of Computer Science</a> at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. My research focuses on efficient and explainable AI, with an emphasis on understanding how neural models process information and using that understanding to improve their efficiency, reliability, and deployment. Before RPI, I received my master&rsquo;s degree from the University of Science and Technology of China, where I worked on perception and risk analysis for autonomous driving.</p>
-
-<p>One direction of my work uses Ollivier&ndash;Ricci curvature to analyze information flow and structural bottlenecks in neural networks, leading to interpretable methods for post-training pruning. More recently, I have been studying efficient large language models, including distillation-aware pruning, where pruning decisions account for what an intended teacher can later recover through knowledge distillation. I am also exploring KV-cache management for long-context and multi-turn inference in long-horizon settings, with the goal of improving both inference efficiency and reliability, including issues such as hallucination and out-of-distribution behavior.</p>
-<p>My research focuses on understanding how neural models represent and propagate information, and how this understanding can be used to improve their efficiency, interpretability, and reliability. I aim to develop principled methods that help us identify what information a model should preserve, compress, or discard, and ultimately make modern AI systems more efficient, controllable, and dependable in real-world settings.</p>
-<p class="interests"><strong>Engineering toolkit</strong><br>Python / C++ &middot; PyTorch / CUDA &middot; Linux / Git / Docker &middot; ROS &middot; TypeScript / Java / SQL</p>
+<div class="overview-panel" role="region" aria-labelledby="biography-title">
+<h2 id="biography-title">Biography</h2>
+<p>I am a fourth-year Ph.D. student in the <a href="https://www.cs.rpi.edu/">Department of Computer Science</a> at <a href="https://www.rpi.edu/">Rensselaer Polytechnic Institute</a>, advised by <a href="https://www.cs.rpi.edu/~ivanor/">Prof. Radoslav Ivanov</a>. My research focuses on efficient and explainable AI, particularly how neural models process information and how this understanding can improve their efficiency, interpretability, and reliability.</p>
+<p>Before joining RPI, I received my master&rsquo;s degree in Computer Technology from the University of Science and Technology of China, where I worked on perception and risk analysis for autonomous driving.</p>
+</div>
+<div class="overview-panel research-interests" role="region" aria-labelledby="research-interests-title">
+<h2 id="research-interests-title">Research Interests</h2>
+<p>My work spans neural network analysis, model compression, and efficient inference. I study how information is represented and propagated within neural models, and how these insights can guide compression and knowledge transfer.</p>
+<p>More recently, I have been exploring efficient and reliable inference for large language models (LLMs) in long-context, multi-turn, and long-horizon settings. This work examines how models should preserve and manage information over extended interactions, with particular attention to reliability challenges such as hallucination and distribution shifts.</p>
+<p>My broader goal is to develop principled methods for understanding, compressing, and controlling modern neural models, making AI systems more efficient, interpretable, and dependable in real-world settings.</p>
+</div>
+<p class="interests"><strong>Engineering Toolkit</strong><br>Python / C++ &middot; PyTorch / CUDA &middot; Linux / Git / Docker &middot; ROS &middot; TypeScript / Java / SQL</p>
 </section>
 <section id="projects" aria-labelledby="projects-title">
-<div class="section-heading"><h2 id="projects-title">Recent research &amp; projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
+<div class="section-heading"><h2 id="projects-title">Recent Research &amp; Projects</h2><a href="https://github.com/SH-Tan">GitHub &rarr;</a></div>
 <article class="project featured" id="dap"><p class="project-meta">Current research &middot; LLM compression</p><h3>Distillation-Aware Pruning for LLMs</h3>
 <p>How should we compress a language model when it can learn from a teacher afterward? Pruning typically aims to minimize the immediate damage from removing weights, but the least damaged model is not necessarily the strongest student after distillation. I study how the teacher&rsquo;s ability to recover that damage should guide what we prune.</p>
 <figure class="project-figure">
@@ -41,30 +48,30 @@
 </figure>
 <p>Distillation-Aware Pruning (DAP) is a second-order framework that jointly models immediate pruning damage and recoverability under the intended teacher and distillation procedure. It estimates the damage that distillation cannot repair to guide the design of compressed students.</p><p>Experiments on Qwen3-8B and DeepSeek-R1-Distill-Llama-8B show gains of up to <strong>3.9 percentage points</strong> in average post-distillation performance over the strongest pruning baseline, under matched sparsity and training budgets.</p><p class="project-note">Manuscript under review at ICLR 2027.</p></article>
 <div class="project graph-projects" role="group" aria-labelledby="graph-projects-title">
-<p class="project-meta">Explainable AI &amp; neuro-symbolic learning</p>
+<p class="project-meta">Neural network analysis &amp; explainable AI</p>
 <h3 id="graph-projects-title">Understanding Neural Networks Through Graph Curvature</h3>
-<p>Neural networks are often treated as black boxes, making it difficult to understand how their internal structure shapes their behavior. I use graph theory and geometry to analyze them as directed graphs that capture information flow, then apply Ricci curvature to identify structural bottlenecks and study two practical questions: which connections can be pruned, and which bottlenecks are associated with fragile predictions?</p>
+<p>Neural networks are often treated as black boxes, making it difficult to understand how their internal structure shapes their behavior. My work represents neural networks as directed graphs and uses Ollivier&ndash;Ricci curvature to analyze information flow and identify structural bottlenecks. These methods address two practical questions: which connections can be pruned, and which bottlenecks are associated with less robust predictions?</p>
 <figure class="project-figure">
 <a href="assets/graph-curvature-overview.jpg" aria-label="View the graph-curvature pipeline at full size"><img src="assets/graph-curvature-overview.jpg" alt="Graph-curvature pruning pipeline: construct a neural graph, calculate edge curvature over a calibration set, store each edge's minimum curvature, and order edges by curvature."></a>
 <figcaption>The graph-curvature pruning pipeline: from a trained network and calibration data to an ordering of neural connections. <a href="assets/graph-curvature-overview.jpg">View full-size figure</a></figcaption>
 </figure>
 <article class="graph-study" aria-labelledby="pruning-title">
-<h4 id="pruning-title">Pruning: Post-Training Neural Network Pruning Using Graph Curvature</h4>
+<h4 id="pruning-title">Interpretable Post-Training Pruning</h4>
 <p class="project-meta">TMLR 2026</p>
 <p>An interpretable post-training pruning method that identifies important information flows and structurally redundant connections using graph Ricci curvature. I accelerated the shortest-path stage of curvature computation on GPU using dynamic programming and matrix-based operations. I also extended the framework to Llama 3 and IBM Granite by constructing graph representations of transformer information flow for model analysis and pruning.</p>
 <div class="resource-links"><a href="https://openreview.net/forum?id=kwACVY73Ug">Paper</a><a href="https://github.com/SH-Tan/Post-Training-NN-Pruning-using-Graph-Curvature">Code</a></div>
 </article>
 <article class="graph-study" aria-labelledby="robustness-title">
-<h4 id="robustness-title">Robustness: Analyzing Neural Network Robustness Using Graph Curvature</h4>
+<h4 id="robustness-title">Understanding Model Robustness</h4>
 <p class="project-meta">ICAA 2024</p>
-<p>I introduce neural data graphs and neural Ricci curvature to identify structural bottlenecks associated with model robustness. Less robust predictions exhibit stronger bottleneck structures, providing a graph-based explanation of model vulnerability.</p>
+<p>This work introduces neural data graphs and neural Ricci curvature to identify structural bottlenecks associated with model robustness. Less robust predictions exhibit stronger bottleneck structures, providing a graph-based explanation of model vulnerability.</p>
 <div class="resource-links"><a href="https://arxiv.org/abs/2410.19607">Paper</a></div>
 </article>
 </div>
 <article class="project" id="kv-cache" aria-labelledby="kv-cache-title">
 <p class="project-meta">Current exploration &middot; Efficient LLM inference</p>
 <h3 id="kv-cache-title">KV Cache Management for Long-Horizon Settings</h3>
-<p>I am exploring KV cache eviction and memory management for language models operating over long contexts and extended interactions. I am interested in how to decide which cached information to retain, when to evict it, and how to allocate limited memory as context grows. The goal is to balance memory use and inference efficiency with the ability to preserve information needed later in a task.</p>
+<p>I am exploring key-value (KV) cache eviction and memory management for language models operating over long contexts and multi-turn interactions. This work examines which cached information to retain, when to evict it, and how to allocate limited memory as context grows. The goal is to improve inference efficiency while preserving information needed for reliable behavior over extended tasks.</p>
 </article>
 <article class="project" id="rcp-rf" aria-labelledby="rcp-title">
 <p class="project-meta">Autonomous driving &middot; IET Intelligent Transport Systems 2024</p>
@@ -85,7 +92,7 @@
 <article class="project"><p class="project-meta">Earlier work &middot; Autonomous perception</p><h3>LiDAR-Based 3D Object Detection</h3><p>A LiDAR-only architecture that combines voxel and range-view representations to improve small-object detection for autonomous vehicles.</p><div class="resource-links"><a href="https://github.com/SH-Tan/voxel-rangenet">Code</a></div></article>
 </section>
 <section id="publications" aria-labelledby="publications-title">
-<div class="section-heading"><h2 id="publications-title">Selected publications</h2><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar &rarr;</a></div>
+<div class="section-heading"><h2 id="publications-title">Selected Publications</h2><a href="https://scholar.google.com/citations?user=RtybckQAAAAJ&amp;hl=en">Google Scholar &rarr;</a></div>
 <ol class="publications">
 <li><span class="pub-year">In review</span><div><h3>Prune What the Teacher Can Repair: Distillation-Aware Pruning for LLMs</h3><p class="venue">Under review at ICLR 2027</p></div></li>
 <li><span class="pub-year">2026</span><div><h3><a href="https://openreview.net/forum?id=kwACVY73Ug">Post-Training Neural Network Pruning Using Graph Curvature</a></h3><p class="venue">Transactions on Machine Learning Research (TMLR)</p><div class="resource-links"><a href="https://openreview.net/pdf?id=kwACVY73Ug">Paper</a><a href="https://github.com/SH-Tan/Post-Training-NN-Pruning-using-Graph-Curvature">Code</a></div></div></li>
