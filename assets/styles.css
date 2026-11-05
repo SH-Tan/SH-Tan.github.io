@@ -92,6 +92,9 @@ main>section>h1,.section-heading>h1,.page-heading>h1{font-size:34px;line-height:
 .biography{min-width:0;padding-left:30px;border-left:1px solid var(--line)}
 .biography h2{font-size:30px;margin-bottom:18px}
 .biography p:last-child{margin-bottom:0}
+.biography-links{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.research-tagline{font-size:17px;line-height:1.6;color:var(--muted);margin-bottom:12px}
+.biography-links .profile-links{font-size:17px;margin:0;gap:6px 22px}
 .profile>.research-interests{margin-top:32px}
 .section-action{margin-top:20px;font-size:17px}
 @media(max-width:800px){header{align-items:flex-start;flex-direction:column;gap:10px}.profile-layout{grid-template-columns:205px minmax(0,1fr);gap:26px}.biography{padding-left:24px;font-size:18px}}
